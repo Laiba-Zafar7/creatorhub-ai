@@ -1,0 +1,18 @@
+<svg width="35" height="28" viewBox="0 0 35 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern AI neural network logo icon -->
+  <circle cx="8" cy="7" r="3" fill="#6366F1" opacity="1"/>
+  <circle cx="20" cy="7" r="3" fill="#8B5CF6" opacity="1"/>
+  <circle cx="8" cy="21" r="3" fill="#06B6D4" opacity="1"/>
+  <circle cx="20" cy="21" r="3" fill="#3B82F6" opacity="1"/>
+  <circle cx="14" cy="14" r="2.5" fill="#5B21B6" opacity="1"/>
+  
+  <!-- Neural network connections -->
+  <line x1="8" y1="7" x2="14" y2="14" stroke="#5B21B6" stroke-width="1.5" opacity="1"/>
+  <line x1="20" y1="7" x2="14" y2="14" stroke="#5B21B6" stroke-width="1.5" opacity="1"/>
+  <line x1="8" y1="21" x2="14" y2="14" stroke="#0891B2" stroke-width="1.5" opacity="1"/>
+  <line x1="20" y1="21" x2="14" y2="14" stroke="#0891B2" stroke-width="1.5" opacity="1"/>
+
+  <!-- Modern brand text with gradient effect -->
+
+
+</svg>

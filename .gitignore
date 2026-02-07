@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+
+# env files
+.env
+.env.local
+.env.*.local
+server/.env
+client/.env
+
+# build output
+dist
+build
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# uploads (if any local storage)
+uploads
+
+# Vite cache
+.vite
+
+# coverage
+coverage
