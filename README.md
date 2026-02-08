@@ -1,5 +1,6 @@
 # CreatorHub AI
 
+
 CreatorHub AI is a full-stack web application that leverages AI tools to generate content, images, and assist users in various creative workflows. This project demonstrates modern web development with React, Node.js, and AI integrations.
 
 ---
@@ -37,12 +38,18 @@ CreatorHub AI is a full-stack web application that leverages AI tools to generat
 
 ## Installation
 
-### 1. Clone the repository:
-
+### 1. Clone the repository
 ```bash
 git clone https://github.com/Laiba-Zafar7/creatorhub-ai.git
 cd creatorhub-ai
-Install dependencies
+```
+---
+Installation
+1. Clone the repository
+git clone https://github.com/Laiba-Zafar7/creatorhub-ai.git
+cd creatorhub-ai
+
+2. Install dependencies
 
 Backend:
 
@@ -76,11 +83,20 @@ Contributing
 
 Fork the project
 
-Create a branch: git checkout -b feature-name
+Create a branch:
 
-Commit your changes: git commit -m "Add feature"
+git checkout -b feature-name
 
-Push to the branch: git push origin feature-name
+
+Commit your changes:
+
+git commit -m "Add feature"
+
+
+Push to the branch:
+
+git push origin feature-name
+
 
 Open a Pull Request
 
