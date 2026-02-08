@@ -44,50 +44,38 @@ git clone https://github.com/Laiba-Zafar7/creatorhub-ai.git
 cd creatorhub-ai
 ```
 ---
-Install dependencies
-Backend
+###  2. Install dependencies
+## Backend
+```bash
 cd server
 npm install
-
-Frontend
-cd ../client
-npm install
+```
 ---
-
-3. Run the project
-Backend
+## Frontend
+```bash
+cd ../client
+npm install
+```
+---
+### 3. Run the project
+## Backend
+```bash
 cd server
 npm run dev
-
-Frontend
+```
+---
+## Frontend
+```bash
 cd ../client
 npm run dev
+```
 ---
 
 Open your browser at http://localhost:5173
  (default Vite port)
 ---
-Contributing
 
-Fork the project
 
-Create a branch:
-
-git checkout -b feature-name
-
-Commit your changes:
-
-git commit -m "Add feature"
----
-
-Push to the branch:
-
-git push origin feature-name
-
----
-Open a Pull Request
----
-
-License
+### License
 
 This project is licensed under the MIT License.
