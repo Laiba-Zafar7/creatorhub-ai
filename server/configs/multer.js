@@ -1,32 +1,23 @@
-// import multer from 'multer';
-
-// const storage = multer.diskStorage({});
-
-// export const upload =multer({storage});
-// middlewares/multer.js
-// import multer from "multer";
-
-// const upload = multer();  
-// export default upload;
 import multer from "multer";
-import path from "path";
-import fs from "fs";
+import { v2 as cloudinary } from "cloudinary";
+import streamifier from "streamifier";
 
-// Make sure upload folder exists
-const uploadFolder = path.join(process.cwd(), "uploads");
-if (!fs.existsSync(uploadFolder)) {
-  fs.mkdirSync(uploadFolder, { recursive: true });
-}
+// Multer memory storage
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
 
-// Configure storage
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, uploadFolder);
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + "-" + file.originalname);
-  },
-});
+// Cloudinary upload function
+export const uploadToCloudinary = (fileBuffer, folder = "uploads") => {
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(
+      { folder },
+      (error, result) => {
+        if (error) return reject(error);
+        resolve(result);
+      }
+    );
+    streamifier.createReadStream(fileBuffer).pipe(stream);
+  });
+};
 
-// Export upload middleware
-export const upload = multer({ storage });
+export default upload;
