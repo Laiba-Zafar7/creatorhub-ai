@@ -174,47 +174,106 @@ const AI = new OpenAI({
 
 
 //remove background
- const removeImageBackground = async (req, res) => {
+//  const removeImageBackground = async (req, res) => {
+//   try {
+//     const { userId } = req.auth();
+//     const image = req.file;
+//     const plan = req.plan;
+//     console.log(plan);
+
+//     console.log("Image File:", JSON.stringify(image, null, 2));
+
+//     if (plan !== "premium") {
+//       return res.json({
+//         success: false,
+//         message: "only available for premium.",
+//       });
+//     }
+
+//     const { secure_url } = await cloudinary.uploader.upload(image.path, {
+//       transformation: [
+//         {
+//           effect: "background_removal",
+//           background_removal: "remove_the_background",
+//         },
+//       ],
+//     });
+
+//     // Simpan hasil ke database
+//     try {
+//       await sql`
+//         INSERT INTO creations (user_id, prompt, content, type)
+//         VALUES (${userId}, 'Remove background from image', ${secure_url}, 'image')
+//       `;
+//       console.log("Database insert successful");
+//     } catch (dbError) {
+//       console.error("Database Error:", JSON.stringify(dbError, null, 2));
+//       throw new Error("Failed to save to database: " + dbError.message);
+//     }
+
+//     // Kirim respons berhasil
+//     return res.json({ success: true, content: secure_url });
+//   } catch (error) {
+//     console.error("Error in removeImageBackground:", JSON.stringify(error, null, 2));
+//     return res.json({ success: false, message: error.message });
+//   }
+// };
+
+const removeImageBackground = async (req, res) => {
   try {
     const { userId } = req.auth();
     const image = req.file;
     const plan = req.plan;
-    console.log(plan);
 
-    console.log("Image File:", JSON.stringify(image, null, 2));
+    if (!image) {
+      return res.status(400).json({ success: false, message: "No image uploaded" });
+    }
 
     if (plan !== "premium") {
       return res.json({
         success: false,
-        message: "only available for premium.",
+        message: "This feature is only available for premium subscription",
       });
     }
 
-    const { secure_url } = await cloudinary.uploader.upload(image.path, {
-      transformation: [
+    // Upload from buffer using stream
+    const uploadResult = await new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
         {
-          effect: "background_removal",
-          background_removal: "remove_the_background",
+          folder: "backgrounds",
+          transformation: [
+            { effect: "background_removal", background_removal: "remove_the_background" },
+          ],
         },
-      ],
+        (error, result) => {
+          if (result) resolve(result);
+          else reject(error);
+        }
+      );
+
+      import("streamifier").then((streamifier) => {
+        streamifier.createReadStream(image.buffer).pipe(stream);
+      });
     });
 
-    // Simpan hasil ke database
+    const secureUrl = uploadResult.secure_url;
+
+    // Save to database
     try {
       await sql`
         INSERT INTO creations (user_id, prompt, content, type)
-        VALUES (${userId}, 'Remove background from image', ${secure_url}, 'image')
+        VALUES (${userId}, 'Remove background from image', ${secureUrl}, 'image')
       `;
       console.log("Database insert successful");
     } catch (dbError) {
-      console.error("Database Error:", JSON.stringify(dbError, null, 2));
+      console.error("Database Error:", dbError);
       throw new Error("Failed to save to database: " + dbError.message);
     }
 
-    // Kirim respons berhasil
-    return res.json({ success: true, content: secure_url });
+    // Respond success
+    return res.json({ success: true, content: secureUrl });
   } catch (error) {
-    console.error("Error in removeImageBackground:", JSON.stringify(error, null, 2));
+    console.error("Error in removeImageBackground:", error);
     return res.json({ success: false, message: error.message });
   }
 };
@@ -225,8 +284,12 @@ const removeImageObject = async (req, res) => {
   try {
     const { userId } = req.auth();
     const { object } = req.body;
-    const image = req.file;
+    const image = req.file; // multer memory storage
     const plan = req.plan;
+
+    if (!image) {
+      return res.status(400).json({ success: false, message: "No image uploaded" });
+    }
 
     if (plan !== "premium") {
       return res.json({
@@ -235,14 +298,26 @@ const removeImageObject = async (req, res) => {
       });
     }
 
-    const { public_id } = await cloudinary.uploader.upload(image.path);
-    // const imageUrl = cloudinary.url(public_id, {
-    const imageUrl = cloudinary.url(public_id, {
+    // Upload from buffer
+    const uploadResult = await new Promise((resolve, reject) => {
+      const stream = cloudinary.uploader.upload_stream(
+        { folder: "objects" },
+        (error, result) => {
+          if (result) resolve(result);
+          else reject(error);
+        }
+      );
+      import("streamifier").then((streamifier) => {
+        streamifier.createReadStream(image.buffer).pipe(stream);
+      });
+    });
+
+    const imageUrl = cloudinary.url(uploadResult.public_id, {
       transformation: [{ effect: `gen_remove:${object}` }],
       resource_type: "image",
     });
 
-    // 5) Persist and respond
+    // Persist to DB (assuming sql tagged template)
     await sql`
       INSERT INTO creations (user_id, prompt, content, type)
       VALUES (${userId}, ${`Remove ${object} from image`}, ${imageUrl}, 'image')
@@ -250,10 +325,13 @@ const removeImageObject = async (req, res) => {
 
     res.json({ success: true, content: imageUrl });
   } catch (err) {
-
+    console.error(err);
     res.json({ success: false, message: err.message });
   }
 };
+
+
+
 
  const resumeReview = async (req, res) => {
   try {
