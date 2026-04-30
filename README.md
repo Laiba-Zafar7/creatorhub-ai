@@ -1,367 +1,179 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=5b21b6&height=200&section=header&text=QuizCloud&fontSize=80&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Cloud-Based%20Online%20Quiz%20System&descAlignY=55&descSize=20" width="100%"/>
+<h1>🎨 CreatorHub AI</h1>
 
-<br/>
+<p>A full-stack AI-powered creative platform for generating content, images, and streamlining creative workflows.</p>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=5B21B6&center=true&vCenter=true&width=600&lines=Teachers+Create+%F0%9F%93%9D;Students+Learn+%F0%9F%93%9A;Results+Matter+%F0%9F%93%8A;Built+with+React+%26+Firebase+%F0%9F%94%A5)](https://git.io/typing-svg)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-<br/>
-
-![React](https://img.shields.io/badge/React-18.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Firebase](https://img.shields.io/badge/Firebase-10.0-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=for-the-badge)
-
-<br/>
-
-> **QuizCloud** is a full-stack cloud-based quiz platform where teachers create quizzes and students attempt them online — with real-time results, leaderboards, and analytics, all powered by Firebase.
-
-<br/>
-
-[🚀 Live Demo](https://quizcloud-app.vercel.app) &nbsp;•&nbsp; [📸 Screenshots](#-screenshots) &nbsp;•&nbsp; [⚙️ Installation](#️-installation) &nbsp;•&nbsp; [📖 Features](#-features)
-
-<br/>
+[Features](#-features) · [Tech Stack](#-tech-stack) · [Screenshots](#-screenshots) · [Getting Started](#-getting-started) · [Contributing](#-contributing)
 
 </div>
 
 ---
 
-## 📌 Table of Contents
+## 📖 Overview
 
-- [✨ Features](#-features)
-- [📸 Screenshots](#-screenshots)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
-- [⚙️ Installation](#️-installation)
-- [🔥 Firebase Setup](#-firebase-setup)
-- [🗄️ Database Structure](#️-database-structure)
-- [🚀 Deployment](#-deployment)
-- [👥 Group Members](#-group-members)
-- [📄 License](#-license)
+**CreatorHub AI** is a modern web application that brings the power of artificial intelligence to your creative workflow. Whether you're generating stunning images from text prompts, crafting compelling blog content, or editing photos with AI-powered tools — CreatorHub AI has you covered.
 
 ---
 
 ## ✨ Features
 
-### 👨‍🏫 Teacher Portal
-
 | Feature | Description |
-|---------|-------------|
-| 🔐 **Secure Auth** | Role-based signup & login with Firebase Authentication |
-| 📊 **Live Dashboard** | Real-time stats — quizzes, students, scores & activity feed |
-| 📝 **Quiz Builder** | Create quizzes with MCQ, True/False & Short Answer questions |
-| 🗂️ **Question Bank** | Save, tag & reuse questions across multiple quizzes |
-| 📋 **My Quizzes** | Manage all quizzes with search, filter & expandable questions |
-| 📈 **Analytics** | Class stats, top performers, pass/fail charts & CSV export |
-| 👨‍🎓 **Students** | Monitor all students with performance scores & grade filters |
-| 🔔 **Notifications** | Send typed announcements to students with audience control |
-| ⚙️ **Settings** | Update profile, change password & configure preferences |
+|---|---|
+| 🖼️ **Text-to-Image Generation** | Transform text prompts into stunning AI-generated visuals |
+| ✍️ **Blog Content Generation** | Auto-generate blog titles and full articles using AI |
+| 🧹 **Background Removal** | Remove or replace image backgrounds in seconds |
+| ✂️ **Object Removal** | Cleanly erase unwanted objects from any image |
+| 🔐 **User Authentication** | Secure login, registration, and plan management |
+| 📊 **Interactive Dashboard** | Manage and review all your AI-generated creations |
+| 🌐 **Community Sharing** | Share your AI creations with the CreatorHub community |
 
-### 📚 Student Portal
+---
 
-| Feature | Description |
-|---------|-------------|
-| 🔐 **Secure Auth** | Role-based signup & login with Firebase Authentication |
-| 📚 **Dashboard** | View available quizzes & personal performance stats |
-| 📝 **My Quizzes** | See pending & attempted quizzes with result history |
-| ⏱️ **Live Quiz Engine** | Timed quiz with countdown, navigation dots & progress bar |
-| 🚫 **Anti-Cheat** | Tab-switch detection with 3-strike auto-submission system |
-| 📊 **My Results** | Complete attempt history with scores & pass/fail status |
-| 🏆 **Leaderboard** | Class rankings with gold/silver/bronze podium display |
-| 🔔 **Notifications** | Receive teacher alerts with read/unread tracking |
-| ⚙️ **Settings** | Update profile, change password & configure preferences |
+## 🛠 Tech Stack
+
+### Frontend
+- **React** — UI framework
+- **Tailwind CSS** — Utility-first styling
+- **Vite** — Fast development build tool
+
+### Backend
+- **Node.js** — Runtime environment
+- **Express** — Web framework for RESTful APIs
+
+### Database
+- **MySQL / MongoDB** — Persistent data storage
+
+### AI & Media
+- **Google Gemini / OpenAI APIs** — Powering content and image generation
+- **Cloudinary** — Image hosting and transformation
 
 ---
 
 ## 📸 Screenshots
 
-> 📷 Take screenshots of your app using **Windows + Shift + S**, save them in a `screenshots/` folder, then uncomment the image lines below!
+### Homepage
+> *(Add a screenshot here)*
 
-### 🏠 Landing Page
-![Landing Page](screenshots/landing.png)
-```
-📷 screenshots/landing.png
-```
-
-### 🎓 Teacher Dashboard
-![Landing Page](screenshots/teacher-dashboard.png)
-```
-📷 screenshots/teacher-dashboard.png
-```
-
-### 📝 Quiz Builder
-![Landing Page](screenshots/quiz-builder.png)
-```
-📷 screenshots/quiz-builder.png
-```
-
-### 📚 Student Dashboard
-![Landing Page](screenshots/student-dashboard.png)
-```
-📷 screenshots/student-dashboard.png
-```
-
-### ⏱️ Live Quiz Engine
-![Landing Page](screenshots/quiz-attempt.png)
-```
-📷 screenshots/quiz-attempt.png
-```
-
-### 🏆 Leaderboard
-![Landing Page](screenshots/leaderboard.png)
-```
-📷 screenshots/leaderboard.png
-```
-
-### 📊 Results & Analytics
-![Landing Page](screenshots/results.png)
-```
-📷 screenshots/results.png
-```
+### Dashboard
+> *(Add a screenshot here)*
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Getting Started
 
+### Prerequisites
+
+Make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/) (v9 or higher)
+- A running instance of MySQL or MongoDB
+
+### Installation
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/Laiba-Zafar7/creatorhub-ai.git
+cd creatorhub-ai
 ```
-⚛️  Frontend     →  React.js 18 + React Router DOM v6
-🔥  Backend      →  Firebase (Auth + Firestore)
-☁️  Database     →  Cloud Firestore (NoSQL)
-🔐  Auth         →  Firebase Authentication (JWT)
-🎨  Styling      →  Pure CSS3 (Custom Design System)
-🔔  Toast        →  React Hot Toast
-🚀  Deployment   →  Vercel (Global CDN)
-📦  Version      →  GitHub
+
+**2. Configure environment variables**
+
+Create `.env` files in both `server/` and `client/` directories. Use the provided `.env.example` files as a reference:
+
+```bash
+# server/.env
+cp server/.env.example server/.env
+
+# client/.env
+cp client/.env.example client/.env
 ```
 
-<div align="center">
+Fill in your API keys (Gemini/OpenAI, Cloudinary, DB credentials, etc.)
 
-![React](https://skillicons.dev/icons?i=react,firebase,js,css,github,vercel)
+**3. Install dependencies**
 
-</div>
+```bash
+# Install backend dependencies
+cd server
+npm install
+
+# Install frontend dependencies
+cd ../client
+npm install
+```
+
+**4. Run the development servers**
+
+```bash
+# Start the backend (from /server)
+npm run dev
+
+# Start the frontend (from /client)
+npm run dev
+```
+
+The app will be running at **[http://localhost:5173](http://localhost:5173)**
 
 ---
 
 ## 📁 Project Structure
 
 ```
-quizcloud-app/
-│
-├── 📁 public/
-│
-├── 📁 src/
-│   ├── 📁 firebase/
-│   │   └── config.js                    # Firebase initialization
-│   │
-│   ├── 📁 context/
-│   │   └── AuthContext.jsx              # Global auth state & functions
-│   │
-│   ├── 📁 components/
-│   │   ├── 📁 auth/
-│   │   │   ├── TeacherSignup.jsx
-│   │   │   ├── TeacherLogin.jsx
-│   │   │   ├── StudentSignup.jsx
-│   │   │   └── StudentLogin.jsx
-│   │   │
-│   │   ├── 📁 teacher/
-│   │   │   ├── Sidebar.jsx
-│   │   │   ├── 📁 quiz/
-│   │   │   │   ├── QuizDetails.jsx
-│   │   │   │   ├── AddQuestion.jsx
-│   │   │   │   ├── QuestionCard.jsx
-│   │   │   │   └── QuestionBankPicker.jsx
-│   │   │   └── 📁 results/
-│   │   │       ├── ResultsStats.jsx
-│   │   │       └── ResultsTable.jsx
-│   │   │
-│   │   └── 📁 student/
-│   │       ├── StudentSidebar.jsx
-│   │       ├── StudentStats.jsx
-│   │       ├── AvailableQuizzes.jsx
-│   │       └── 📁 quiz/
-│   │           ├── QuizTimer.jsx
-│   │           ├── QuizQuestion.jsx
-│   │           └── QuizResult.jsx
-│   │
-│   ├── 📁 pages/
-│   │   ├── LandingPage.jsx
-│   │   ├── 📁 teacher/
-│   │   │   ├── TeacherDashboard.jsx
-│   │   │   ├── MyQuizzes.jsx
-│   │   │   ├── Students.jsx
-│   │   │   ├── QuestionBank.jsx
-│   │   │   ├── Notifications.jsx
-│   │   │   ├── Settings.jsx
-│   │   │   ├── 📁 quiz/
-│   │   │   │   └── CreateQuiz.jsx
-│   │   │   └── 📁 results/
-│   │   │       └── QuizResults.jsx
-│   │   │
-│   │   └── 📁 student/
-│   │       ├── StudentDashboard.jsx
-│   │       ├── MyQuizzes.jsx
-│   │       ├── MyResults.jsx
-│   │       ├── Leaderboard.jsx
-│   │       ├── Notifications.jsx
-│   │       ├── Settings.jsx
-│   │       └── 📁 quiz/
-│   │           └── AttemptQuiz.jsx
-│   │
-│   ├── 📁 styles/
-│   │   ├── auth.css
-│   │   ├── notifications.css
-│   │   ├── settings.css
-│   │   ├── 📁 teacher/
-│   │   └── 📁 student/
-│   │
-│   ├── App.jsx                          # Main routes
-│   └── index.js                         # Entry point
-│
-├── .env                                 # 🔒 Firebase keys (NOT in repo)
-├── .gitignore
-├── package.json
+creatorhub-ai/
+├── client/               # React frontend (Vite)
+│   ├── src/
+│   │   ├── components/   # Reusable UI components
+│   │   ├── pages/        # Route-level page components
+│   │   ├── hooks/        # Custom React hooks
+│   │   └── utils/        # Helper functions
+│   └── public/
+├── server/               # Node.js / Express backend
+│   ├── controllers/      # Route handlers
+│   ├── routes/           # API route definitions
+│   ├── models/           # Database models
+│   └── middleware/       # Auth & validation middleware
 └── README.md
 ```
 
 ---
 
-## ⚙️ Installation
+## 🤝 Contributing
 
-### Prerequisites
-- ✅ Node.js v16+ installed
-- ✅ Firebase account
-- ✅ Git installed
+Contributions are welcome! Here's how to get started:
 
-### Steps
+1. **Fork** the repository
+2. **Create** your feature branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Commit** your changes:
+   ```bash
+   git commit -m "feat: add your feature description"
+   ```
+4. **Push** to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. **Open a Pull Request** and describe your changes
 
-**1️⃣ Clone the repository**
-```bash
-git clone https://github.com/YOUR_USERNAME/quizcloud-app.git
-cd quizcloud-app
-```
-
-**2️⃣ Install dependencies**
-```bash
-npm install
-```
-
-**3️⃣ Create environment file and add Firebase keys**
-```env
-REACT_APP_FIREBASE_API_KEY=your_api_key
-REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-REACT_APP_FIREBASE_PROJECT_ID=your_project_id
-REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-REACT_APP_FIREBASE_APP_ID=your_app_id
-```
-
-**4️⃣ Start the app**
-```bash
-npm start
-```
-
-🎉 App runs at **http://localhost:3000**
-
----
-
-## 🔥 Firebase Setup
-
-1. Go to [Firebase Console](https://console.firebase.google.com)
-2. Create a new project named `QuizCloud`
-3. Enable **Email/Password** Authentication
-4. Create a **Firestore Database** in test mode
-5. Register a Web App and copy config keys to `.env`
-6. Add Firestore Security Rules from the project documentation
-
----
-
-## 🗄️ Database Structure
-
-```
-📦 Firestore Database
-│
-├── 👤 users/{uid}
-│   ├── name, email, role
-│   ├── subject, school          → Teacher fields
-│   └── grade, rollNumber        → Student fields
-│
-├── 📝 quizzes/{quizId}
-│   ├── title, subject, grade
-│   ├── timeLimit, totalMarks
-│   ├── questions[]
-│   └── status, teacherId
-│
-├── 📊 attempts/{attemptId}
-│   ├── studentId, quizId
-│   ├── score, percentage
-│   ├── passed, timeTaken
-│   └── tabWarnings, answers{}
-│
-├── 🗂️ questionbank/{questionId}
-│   ├── type, text, options[]
-│   ├── subject, difficulty
-│   └── tags, teacherId
-│
-└── 🔔 notifications/{notifId}
-    ├── title, message, type
-    ├── audience, senderId
-    └── readBy[]
-```
-
----
-
-## 🚀 Deployment
-
-Deployed on **Vercel** for free with automatic HTTPS and global CDN.
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel
-```
-
-> ⚠️ Add Firebase environment variables in **Vercel Dashboard → Settings → Environment Variables**
-
-
-
-</div>
-
----
-
-## 📸 How to Add Screenshots
-
-```
-1. Run your app → npm start
-2. Take screenshots using Windows + Shift + S
-3. Create a screenshots/ folder in your project root
-4. Save with these names:
-   ✅ landing.png
-   ✅ teacher-dashboard.png
-   ✅ quiz-builder.png
-   ✅ student-dashboard.png
-   ✅ quiz-attempt.png
-   ✅ leaderboard.png
-   ✅ results.png
-5. Uncomment the image lines in Screenshots section above
-6. git add . → git commit → git push
-```
+Please make sure your code follows the existing style and that all tests pass before submitting a PR.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — feel free to use, modify and distribute.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 <div align="center">
-
-### ⭐ If you found this project helpful, please give it a star!
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=5b21b6&height=100&section=footer" width="100%"/>
-
+  <p>Built with ❤️ by <a href="https://github.com/Laiba-Zafar7">Laiba Zafar</a></p>
 </div>
