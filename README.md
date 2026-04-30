@@ -58,11 +58,10 @@
 
 ## 📸 Screenshots
 
-### Homepage
-> *(Add a screenshot here)*
-
-### Dashboard
-> *(Add a screenshot here)*
+### Homepage 
+![Homepage](assets/homepage.png) 
+### Dashboard 
+![Dashboard](assets/dashboard.png)
 
 ---
 
