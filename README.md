@@ -80,43 +80,43 @@
 > 📷 Take screenshots of your app using **Windows + Shift + S**, save them in a `screenshots/` folder, then uncomment the image lines below!
 
 ### 🏠 Landing Page
-<!-- ![Landing Page](screenshots/landing.png) -->
+![Landing Page](screenshots/landing.png)
 ```
 📷 screenshots/landing.png
 ```
 
 ### 🎓 Teacher Dashboard
-<!-- ![Teacher Dashboard](screenshots/teacher-dashboard.png) -->
+![Landing Page](screenshots/teacher-dashboard.png)
 ```
 📷 screenshots/teacher-dashboard.png
 ```
 
 ### 📝 Quiz Builder
-<!-- ![Quiz Builder](screenshots/quiz-builder.png) -->
+![Landing Page](screenshots/quiz-builder.png)
 ```
 📷 screenshots/quiz-builder.png
 ```
 
 ### 📚 Student Dashboard
-<!-- ![Student Dashboard](screenshots/student-dashboard.png) -->
+![Landing Page](screenshots/student-dashboard.png)
 ```
 📷 screenshots/student-dashboard.png
 ```
 
 ### ⏱️ Live Quiz Engine
-<!-- ![Live Quiz](screenshots/quiz-attempt.png) -->
+![Landing Page](screenshots/quiz-attempt.png)
 ```
 📷 screenshots/quiz-attempt.png
 ```
 
 ### 🏆 Leaderboard
-<!-- ![Leaderboard](screenshots/leaderboard.png) -->
+![Landing Page](screenshots/leaderboard.png)
 ```
 📷 screenshots/leaderboard.png
 ```
 
 ### 📊 Results & Analytics
-<!-- ![Results](screenshots/results.png) -->
+![Landing Page](screenshots/results.png)
 ```
 📷 screenshots/results.png
 ```
@@ -326,19 +326,7 @@ vercel
 
 > ⚠️ Add Firebase environment variables in **Vercel Dashboard → Settings → Environment Variables**
 
----
 
-## 👥 Group Members
-
-<div align="center">
-
-| Name | Roll Number |
-|------|-------------|
-| **Ammara Ahmad** | 2022-BS-SE-110 |
-| **Areeba Zafar** | 2022-BS-SE-125 |
-| **Laiba Zafar** | 2022-BS-SE-126 |
-
-**Cloud Computing Project — BS Software Engineering — 2025/2026**
 
 </div>
 
